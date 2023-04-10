@@ -2,7 +2,7 @@ import Cell from "./cell";
 
 const Board = () => {
     return <div id="board">
-        <Cell num={0} type="X" />
+        <Cell num={0} type="X"/>
         <Cell num={1} type="X" />
         <Cell num={2} type="X" />
         <Cell num={3} type="X" />

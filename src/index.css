@@ -17,6 +17,7 @@ body {
 .cells {
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.87);
+  width: 15vw;
 }
 
 .cells:hover {

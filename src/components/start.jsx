@@ -1,9 +1,20 @@
-const Start = ({setGameOn}) => {
+const Start = ({setGameOn, setName, setIsFirst}) => {
     return <div id="start">
-        <h2>Welcome, to start the game press play.</h2>
-        <button onClick={() => {
+        <h2>Welcome, to start the game enter your name and press play.</h2>
+        <form onSubmit={(event) => {
+            event.preventDefault();
+            setName(event.target[0].value);
+            setIsFirst(event.target[1].value === 'true');
             setGameOn(true);
-        }}>Play</button>
+        }}>
+            <input name="name" required></input>
+            <select required>
+                <option value={true}>Go First</option>
+                <option value={false}>Go Second</option>
+                <option value={Math.random() >= 0.5}>Random</option>
+            </select>
+            <button type="submit">Play</button>
+        </form>
     </div>
 }
 
