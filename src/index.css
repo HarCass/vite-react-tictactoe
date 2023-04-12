@@ -15,9 +15,14 @@ body {
 }
 
 .cells {
+  display: flex;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.87);
-  width: 15vw;
+  width: 20vw;
+  height: 20vw;
+  align-items: center;
+  justify-content: center;
+  font-size: 10vw;
 }
 
 .cells:hover {
@@ -29,8 +34,15 @@ button {
   padding: 10px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   body{
     font-size: 32px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .cells {  
+    width: 11vw;
+    height: 11vw;
   }
 }
