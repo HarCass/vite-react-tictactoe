@@ -9,9 +9,17 @@ body {
   text-align: center;
 }
 
+#game {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
 #board {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 0;
+  column-gap: 0;
 }
 
 .cells {

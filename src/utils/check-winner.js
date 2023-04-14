@@ -10,7 +10,7 @@ export const checkWinner = (board) => {
         [2, 4, 6]
     ];
 
-    for (row of boardWins) {
+    for (const row of boardWins) {
         if (board[row[0]] === board[row[1]] && board[row[0]] === board[row[2]] && board[row[0]] !== ' ') return board[row[0]];
     }
     return false;
