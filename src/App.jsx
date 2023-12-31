@@ -5,12 +5,12 @@ import Start from "./components/start"
 
 function App() {
   const [gameOn, setGameOn] = useState(false);
-  const [name, setName] = useState(null);
+  const [name, setName] = useState('');
   const [isFirst, setIsFirst] = useState(null);
   return (
     <div className="App">
       <Header />
-      {gameOn ? <Game name={name} isFirst={isFirst} setGameOn={setGameOn} /> : <Start  setGameOn={setGameOn} setName={setName} setIsFirst={setIsFirst}/>}
+      {gameOn ? <Game name={name} isFirst={isFirst} setGameOn={setGameOn} /> : <Start  setGameOn={setGameOn} name={name} setName={setName} setIsFirst={setIsFirst}/>}
     </div>
   )
 }

@@ -1,4 +1,4 @@
-const Start = ({setGameOn, setName, setIsFirst}) => {
+const Start = ({setGameOn, name, setName, setIsFirst}) => {
     return <div id="start">
         <h2>Welcome, to start the game enter your name and press play.</h2>
         <form onSubmit={(event) => {
@@ -7,7 +7,7 @@ const Start = ({setGameOn, setName, setIsFirst}) => {
             setIsFirst(event.target[1].value === 'true');
             setGameOn(true);
         }}>
-            <input name="name" required></input>
+            <input name="name" value={name} onChange={(e) => setName(e.target.value)} required></input>
             <select required>
                 <option value={true}>Go First</option>
                 <option value={false}>Go Second</option>

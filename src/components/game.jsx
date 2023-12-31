@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import Board from "./board";
 
 const Game = ({name, isFirst, setGameOn}) => {
-    const [playerType, setPlayerType] = useState(isFirst ? 'X' : 'Y');
-    const [comType, setComType] = useState(isFirst ? 'Y' : 'X');
+    const playerType = isFirst ? 'X' : 'O';
+    const comType = isFirst ? 'O' : 'X';
     const [comTalk, setComTalk] = useState('Welcome Human, prepare for defeat.');
     const [isTurn, setIsTurn] = useState(isFirst);
     const [hasWon, setHasWon] = useState(null);

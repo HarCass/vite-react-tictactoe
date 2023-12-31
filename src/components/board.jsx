@@ -8,8 +8,9 @@ const Board = ({isTurn, setIsTurn, playerType, comType, setComTalk, setHasWon}) 
     const [turnCount, setTurnCount] = useState(0);
 
     useEffect(() => {
-        if (checkWinner(boardArr)) {
-            setHasWon(checkWinner(boardArr));
+        const winner = checkWinner(boardArr);
+        if (winner) {
+            setHasWon(winner);
         }
         else if (turnCount === 9) {
             setHasWon('DRAW');
